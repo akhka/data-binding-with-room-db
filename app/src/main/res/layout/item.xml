@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.gcs.testroomdb.User" />
+        <variable
+            name="itemHandler"
+            type="com.gcs.testroomdb.Handlers" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ly_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2"
+        android:onClick="@{itemHandler::onClickItem}">
+
+        <TextView
+            android:id="@+id/tv_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{user.firstName}"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@{user.lastName}"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</layout>
